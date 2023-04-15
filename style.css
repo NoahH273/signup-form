@@ -8,6 +8,7 @@
     --light-grey: rgb(252, 252, 252);
     --border-grey: rgb(210, 210, 210);
     --border-blue: rgb(114, 116, 235);
+    --logo-text: rgb(235, 235, 235);
 }
 
 body {
@@ -23,19 +24,54 @@ body {
 
 .logo-section {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 100vh;
-    font-size: 30px;
     min-width: 30%;
     max-width: 30%;
 }
 
+.logo-text {
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 150px;
+    min-width: 100%;
+    min-height: 150px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trademark {
+    width: 75px;
+    height: auto;
+}
+
+.photo-credit {
+    font-size: 10px;
+    margin-bottom: 25px;
+}
+
+.logo-text, .photo-credit {
+    color: var(--logo-text);
+}
+
+a {
+    color: inherit;
+}
+
+.instructions {
+    font-size: 35px;
+}
+
 .logo-section, .logo-wrapper {
-    background-color: var(--border-blue);
+    background-image: url(images/background.jpg);
     
 }
 
 div.logo-wrapper {
-    
     flex: 3 3;
     min-width: 30%;
 }
@@ -78,8 +114,6 @@ input {
     outline: none;
 }
 
-
-
 input:valid {
     border: 1px solid lightgreen;
 }
@@ -87,9 +121,6 @@ input:valid {
 input:invalid {
     border: 1px solid red;
 }
-
-
-
 
 input:invalid:placeholder-shown {
     border: 1px solid var(--border-grey);
@@ -129,11 +160,16 @@ label {
 .login-section {
     background-color: var(--light-grey);
     flex: 1;
+    padding: 50px 0 0 100px;
+    
+}
+
+.login-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 1010px 0 100px;
-    
+    min-width: 235px;
+    max-width: 235px;
 }
 
 .create-account-button {
