@@ -75,15 +75,10 @@ input {
     width: max-content;
     border-radius: 5px;
     appearance: none;
-    border: 1px solid var(--border-grey);
-}
-
-input:focus, input:hover {
-    border: 1px solid var(--border-blue);
     outline: none;
-    box-shadow: 2px 2px 20px var(--light-grey);
-
 }
+
+
 
 input:valid {
     border: 1px solid lightgreen;
@@ -91,6 +86,18 @@ input:valid {
 
 input:invalid {
     border: 1px solid red;
+}
+
+
+
+
+input:invalid:placeholder-shown {
+    border: 1px solid var(--border-grey);
+}
+
+input:focus:focus {
+    box-shadow: 0 2px 5px -2px rgb(92, 88, 88);
+    border: 1px solid var(--border-blue);
 }
 
 label {
@@ -105,10 +112,10 @@ label {
 .form {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 15px -15px rgb(0, 0, 0) ;
-    margin: 0 140px 0 10px;
     flex: 1;
-    padding: 25px;
+    padding: 25px 165px 25px 35px;
+    box-shadow: 0 20px 25px -20px var(--border-grey);
+    z-index: 10;
 }
 
 .info {
